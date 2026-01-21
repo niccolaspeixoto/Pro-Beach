@@ -182,13 +182,14 @@ main{
     color: rgb(249, 115, 48);
 }
 
-.title{
+.title, .title-contact{
     background-color: rgb(249, 115, 48);
     border: 1px solid rgba(255, 255, 255, 0.811);
     padding: 7px;
     border-radius: 20px;
     color: rgb(255, 255, 255);
     font-size: 13px;
+    width: fit-content;
 }
 
 .wrapper-services{
@@ -268,3 +269,58 @@ main{
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 }
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 300px;
+    height: 70vh;
+}
+
+.left-content{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 50%;
+    height: 600px;
+}
+
+.left-content span{
+    color: rgb(249, 115, 48);
+}
+
+.left-content h1{
+    font-size: 48px;
+    color: rgb(43, 51, 99);
+    line-height: 1.1;
+}
+
+.card-info{
+    margin: 20px 5px;
+}
+
+.right-content{
+    width: 50%;
+    background-color: rgb(251, 139, 82);
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+.right-content a{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(43, 51, 99);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 20px;
+    width: 200px;
+}
+
+
