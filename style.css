@@ -311,6 +311,8 @@ main{
     flex-direction: column;
     text-align: center;
     color: white;
+    margin-left: 50px;
+    padding: 20px;
 }
 
 .right-content a{
@@ -320,7 +322,7 @@ main{
     color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 20px;
-    width: 200px;
+    width: 100%;
 }
 
 
