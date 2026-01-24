@@ -282,8 +282,9 @@ main{
     display: flex;
     gap: 10px;
     flex-direction: column;
+    justify-content: center;
     width: 50%;
-    height: 600px;
+    height: 90%;
 }
 
 .left-content span{
@@ -303,7 +304,7 @@ main{
 .right-content{
     width: 50%;
     background-color: rgb(251, 139, 82);
-    height: 600px;
+    height: 90%;
     border-radius: 20px;
     display: flex;
     align-items: center;
