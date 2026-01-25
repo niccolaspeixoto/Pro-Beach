@@ -193,9 +193,10 @@ main {
 
 .wrapper-services {
     display: grid;
-    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-columns: repeat(2, 30%) ;
     gap: 30px;
     place-items: center;
+    justify-content: center;
 }
 
 .box-services {
@@ -231,9 +232,8 @@ main {
     gap: 30px;
     flex-direction: column;
     margin-top: 100px;
-    height: auto;
+    height: 80vh;
     padding: 15px;
-
 }
 
 .text-diferenciais {
@@ -258,9 +258,9 @@ main {
 
 .wrapper-info {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 300px);
     margin-bottom: 50px;
-    gap: 20px;
+    gap: 50px;
 }
 
 .box-info {
@@ -275,7 +275,7 @@ main {
     justify-content: center;
     align-items: center;
     margin: 50px 300px;
-    height: 70vh;
+    height: 80vh;
 }
 
 .left-content {
