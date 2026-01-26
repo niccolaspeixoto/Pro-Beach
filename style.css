@@ -104,7 +104,7 @@ main {
 .destaque-top {
     background-color: rgba(255, 255, 255, 0.251);
     backdrop-filter: blur(2px);
-    border-radius: 20px;
+    border-radius: 10px;
     display: inline-block;
     padding: 10px;
     box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
