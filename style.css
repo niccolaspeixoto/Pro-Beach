@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    padding:0 300px;
+    padding: 0 300px;
     background-color: #d4a91e;
     width: 100%;
     color: white;
@@ -20,28 +21,28 @@ header{
     backdrop-filter: blur(5px);
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.logo img{
+.logo img {
     height: 60px;
     width: auto;
     border-radius: 50%;
 }
 
-.logo h1{
+.logo h1 {
     font-size: 20px;
 }
 
-.links{
+.links {
     display: flex;
     gap: 20px;
 }
 
-.links a{
+.links a {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
@@ -49,12 +50,12 @@ header{
     transition: 0.5s;
 }
 
-.links a:hover{
+.links a:hover {
     color: rgb(255, 92, 33);
     transform: scale(1.1);
 }
 
-.cta a{
+.cta a {
     background-color: rgb(255, 92, 33);
     padding: 10px 20px;
     text-align: center;
@@ -66,19 +67,19 @@ header{
     font-weight: bold;
 }
 
-.cta a:hover{
+.cta a:hover {
     background-color: rgb(251, 182, 147);
     color: orangered;
 }
 
-main{
+main {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
 
-.background-main{
+.background-main {
     position: absolute;
     top: 0;
     left: 0;
@@ -91,7 +92,7 @@ main{
     opacity: 0.3;
 }
 
-.content{
+.content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,7 +101,7 @@ main{
     margin-top: 70px;
 }
 
-.destaque-top{
+.destaque-top {
     background-color: rgba(255, 255, 255, 0.251);
     backdrop-filter: blur(2px);
     border-radius: 20px;
@@ -114,33 +115,33 @@ main{
 
 }
 
-.destaque-bottom{
+.destaque-bottom {
     display: flex;
     gap: 50px;
-    
-    
+
+
 }
 
-.text{
+.text {
     text-align: center;
     font-size: 36px;
 }
 
-.text h1{
-    
+.text h1 {
+
     color: rgb(43, 51, 99);
     line-height: 1.1;
     font-weight: 1000;
     margin-top: 20px;
 }
 
-.text p{
+.text p {
     margin-top: 20px;
     font-size: 18px;
     color: rgb(43, 51, 99);
 }
 
-.text span{
+.text span {
     color: rgb(249, 115, 48);
 }
 
@@ -152,7 +153,7 @@ main{
 }
 
 
-.buttons-main a{
+.buttons-main a {
     text-decoration: none;
     color: white;
     background-color: rgb(249, 115, 48);
@@ -160,10 +161,7 @@ main{
     border-radius: 10px;
 }
 
-.services{
-}
-
-.text-services{
+.text-services {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -171,18 +169,19 @@ main{
     margin: 50px;
 }
 
-.text-services h1{
+.text-services h1 {
     font-size: 62px;
     color: rgb(43, 51, 99);
     line-height: 1.1;
     margin-bottom: 10px;
 }
 
-.text-services span{
+.text-services span {
     color: rgb(249, 115, 48);
 }
 
-.title, .title-contact{
+.title,
+.title-contact {
     background-color: rgb(249, 115, 48);
     border: 1px solid rgba(255, 255, 255, 0.811);
     padding: 7px;
@@ -192,30 +191,31 @@ main{
     width: fit-content;
 }
 
-.wrapper-services{
-    display: flex;
-    align-items: center;
+.wrapper-services {
+    display: grid;
+    grid-template-columns: repeat(2, 30%) ;
     gap: 30px;
-    flex-direction: column;
+    place-items: center;
+    justify-content: center;
 }
 
-.box-services{
+.box-services {
     background-color: rgb(249, 115, 48);
-    width: 600px;
+    width: 90%;
     border-radius: 20px;
     padding: 10px;
-    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
     color: white;
 
 }
 
-.box-services img{
+.box-services img {
     height: 300px;
     width: 100%;
     border-radius: 12px;
 }
 
-.box-details p{
+.box-details p {
     display: inline-block;
     margin: 15px;
     margin-left: 0;
@@ -225,18 +225,18 @@ main{
     font-size: 10px;
 }
 
-.diferenciais{
+.diferenciais {
     background-color: rgb(240, 239, 239);
     display: flex;
     align-items: center;
     gap: 30px;
     flex-direction: column;
     margin-top: 100px;
-    height: auto;
-
+    height: 80vh;
+    padding: 15px;
 }
 
-.text-diferenciais{
+.text-diferenciais {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -245,65 +245,66 @@ main{
     margin: 50px;
 }
 
-.text-diferenciais h1{
+.text-diferenciais h1 {
     font-size: 62px;
     color: rgb(43, 51, 99);
     line-height: 1.1;
     margin-bottom: 10px;
 }
 
-.text-diferenciais span{
+.text-diferenciais span {
     color: rgb(249, 115, 48);
 }
 
-.wrapper-info{
-    display: flex;
-    gap: 50px;
-    flex-direction: column;
+.wrapper-info {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
     margin-bottom: 50px;
+    gap: 50px;
 }
 
-.box-info{
+.box-info {
     background-color: white;
     padding: 20px;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 }
 
-.contact{
+.contact {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 50px 300px;
-    height: 70vh;
+    height: 80vh;
 }
 
-.left-content{
+.left-content {
     display: flex;
     gap: 10px;
     flex-direction: column;
+    justify-content: center;
     width: 50%;
-    height: 600px;
+    height: 90%;
 }
 
-.left-content span{
+.left-content span {
     color: rgb(249, 115, 48);
 }
 
-.left-content h1{
+.left-content h1 {
     font-size: 48px;
     color: rgb(43, 51, 99);
     line-height: 1.1;
 }
 
-.card-info{
+.card-info {
     margin: 20px 5px;
 }
 
-.right-content{
+.right-content {
     width: 50%;
     background-color: rgb(251, 139, 82);
-    height: 600px;
+    height: 90%;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -311,16 +312,16 @@ main{
     flex-direction: column;
     text-align: center;
     color: white;
+    margin-left: 50px;
+    padding: 20px;
 }
 
-.right-content a{
+.right-content a {
     margin: 10px;
     padding: 10px;
     background-color: rgb(43, 51, 99);
     color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 20px;
-    width: 200px;
+    width: 100%;
 }
-
-
