@@ -5,6 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -222,7 +224,7 @@ main {
     transform: translateY(-6px);
 }
 
-.services-img{
+.services-img {
     overflow: hidden;
     border-radius: 12px;
     position: relative;
@@ -243,7 +245,7 @@ main {
     overflow: hidden;
 }
 
-.services-img img:hover{
+.services-img img:hover {
     transform: scale(1.05);
 }
 
@@ -309,7 +311,77 @@ main {
     box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 }
 
+.plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.plans h1 {
+    font-size: 62px;
+    color: rgb(43, 51, 99);
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.plans span {
+    color: rgb(249, 115, 48);
+}
+
+.wrapper-plans {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    position: relative;
+}
+
+.box-plans {
+    background-color: rgb(249, 115, 48);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    height: 50vh;
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    position: relative;
+}
+
+.box-plans h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.price-plans {
+    position: absolute;
+    bottom: 20px;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.price-plans a{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(43, 51, 99);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 12px;
+    width: fit-content;
+    font-weight: bold;
+}
 .contact {
+    
+    height: 80vh;
+    background-color: rgba(240, 239, 239) ;
+}
+
+.wrapper-content{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -365,7 +437,7 @@ main {
     width: 100%;
 }
 
-footer{
+footer {
     background-color: rgb(43, 51, 99);
     color: white;
     text-align: center;
