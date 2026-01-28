@@ -364,3 +364,10 @@ main {
     border-radius: 20px;
     width: 100%;
 }
+
+footer{
+    background-color: rgb(43, 51, 99);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
