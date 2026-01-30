@@ -170,6 +170,37 @@ main {
     transition: 0.3s;
 }
 
+.about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 40px 300px;
+    background-color:rgb(240, 239, 239) ;
+}
+
+.text-about-us{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    align-items: center;
+}
+
+.text-about-us h1 {
+    font-size: 48px;
+    color: rgb(43, 51, 99);
+    line-height: 1.1;
+}
+
+.text-about-us span {
+    color: rgb(249, 115, 48);
+}
+
+
+
 .text-services {
     display: flex;
     flex-direction: column;
