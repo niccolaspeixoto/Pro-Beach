@@ -190,9 +190,10 @@ main {
 }
 
 .text-about-us h1 {
-    font-size: 48px;
+    font-size: 62px;
     color: rgb(43, 51, 99);
     line-height: 1.1;
+    width: 451px;
 }
 
 .text-about-us span {
