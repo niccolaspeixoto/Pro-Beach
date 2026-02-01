@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 15vh;
     scroll-behavior: smooth;
 }
 
@@ -103,6 +103,10 @@ main {
     margin-top: 70px;
 }
 
+.destaque-top i{
+    color: rgb(249, 115, 48);
+}
+
 .destaque-top {
     background-color: rgba(255, 255, 255, 0.251);
     backdrop-filter: blur(2px);
@@ -120,8 +124,10 @@ main {
 .destaque-bottom {
     display: flex;
     gap: 50px;
+}
 
-
+.destaque-bottom i{
+    color: rgb(249, 115, 48);
 }
 
 .text {
@@ -159,7 +165,7 @@ main {
     text-decoration: none;
     color: white;
     background-color: rgb(249, 115, 48);
-    padding: 15px 30px;
+    padding: 15px 50px;
     border-radius: 10px;
     transition: 0.5s;
 }
@@ -176,7 +182,7 @@ main {
     align-items: center;
     text-align: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     padding: 40px 300px;
     background-color:rgb(240, 239, 239) ;
 }
@@ -190,7 +196,7 @@ main {
 }
 
 .text-about-us h1 {
-    font-size: 62px;
+    font-size: 53px;
     color: rgb(43, 51, 99);
     line-height: 1.1;
     width: 451px;
@@ -341,6 +347,12 @@ main {
     padding: 20px;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    transition: 0.5s ease;
+}
+
+.box-info:hover {
+    background-color:rgb(249, 115, 48) ;
+    color: rgb(255, 255, 255);
 }
 
 .plans {
@@ -378,8 +390,14 @@ main {
     border-radius: 20px;
     width: 300px;
     height: 50vh;
-    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    box-shadow: rgba(172, 114, 6, 0.3) 0px 7px 29px 0px;
     position: relative;
+    transition: 0.5s ease;
+}
+
+.box-plans:hover{
+    box-shadow: rgba(241, 66, 2, 0.849) 0px 7px 29px 0px;
+    transform: translateY(-6px);
 }
 
 .box-plans h2 {
@@ -406,9 +424,14 @@ main {
     border-radius: 12px;
     width: fit-content;
     font-weight: bold;
+    transition: 0.5s;
 }
+
+.price-plans a:hover{
+    background-color: rgb(77, 89, 153);
+}
+
 .contact {
-    
     height: 80vh;
     background-color: rgba(240, 239, 239) ;
 }
@@ -427,7 +450,7 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    height: 90%;
+    height: 80vh;
 }
 
 .left-content span {
@@ -441,13 +464,38 @@ main {
 }
 
 .card-info {
+    display: flex;
+    align-items: center;
     margin: 20px 5px;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(249, 115, 48);
+    padding: 10px;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+}
+
+.icon i{
+    color: white;
+    font-size: 20px;
+}
+
+.text-contact{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    font-weight: 500;
 }
 
 .right-content {
     width: 50%;
     background-color: rgb(251, 139, 82);
-    height: 75%;
+    height: 90%;
     border-radius: 20px;
     display: flex;
     align-items: center;
