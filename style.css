@@ -540,7 +540,7 @@ footer {
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: 0.8s ease;
+    transition: 2s ease;
 }
 
 .reveal.ativo {
