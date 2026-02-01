@@ -101,9 +101,19 @@ main {
     height: 90vh;
     flex-direction: column;
     margin-top: 70px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecer 1.5s ease forwards;
 }
 
-.destaque-top i{
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.destaque-top i {
     color: rgb(249, 115, 48);
 }
 
@@ -126,7 +136,7 @@ main {
     gap: 50px;
 }
 
-.destaque-bottom i{
+.destaque-bottom i {
     color: rgb(249, 115, 48);
 }
 
@@ -135,12 +145,14 @@ main {
     font-size: 36px;
 }
 
+
 .text h1 {
 
     color: rgb(43, 51, 99);
     line-height: 1.1;
     font-weight: 1000;
     margin-top: 20px;
+
 }
 
 .text p {
@@ -176,7 +188,7 @@ main {
     transition: 0.3s;
 }
 
-.about-us{
+.about-us {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,10 +196,11 @@ main {
     justify-content: center;
     height: 80vh;
     padding: 40px 300px;
-    background-color:rgb(240, 239, 239) ;
+    background-color: rgb(240, 239, 239);
+
 }
 
-.text-about-us{
+.text-about-us {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -351,7 +364,7 @@ main {
 }
 
 .box-info:hover {
-    background-color:rgb(249, 115, 48) ;
+    background-color: rgb(249, 115, 48);
     color: rgb(255, 255, 255);
 }
 
@@ -395,7 +408,7 @@ main {
     transition: 0.5s ease;
 }
 
-.box-plans:hover{
+.box-plans:hover {
     box-shadow: rgba(241, 66, 2, 0.849) 0px 7px 29px 0px;
     transform: translateY(-6px);
 }
@@ -415,7 +428,7 @@ main {
     text-align: center;
 }
 
-.price-plans a{
+.price-plans a {
     margin-top: 10px;
     padding: 10px;
     background-color: rgb(43, 51, 99);
@@ -427,16 +440,16 @@ main {
     transition: 0.5s;
 }
 
-.price-plans a:hover{
+.price-plans a:hover {
     background-color: rgb(77, 89, 153);
 }
 
 .contact {
     height: 80vh;
-    background-color: rgba(240, 239, 239) ;
+    background-color: rgba(240, 239, 239);
 }
 
-.wrapper-content{
+.wrapper-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -469,7 +482,7 @@ main {
     margin: 20px 5px;
 }
 
-.icon{
+.icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -480,12 +493,12 @@ main {
     height: 50px;
 }
 
-.icon i{
+.icon i {
     color: white;
     font-size: 20px;
 }
 
-.text-contact{
+.text-contact {
     display: flex;
     flex-direction: column;
     margin-left: 15px;
@@ -522,4 +535,15 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.reveal.ativo {
+    opacity: 1;
+    transform: translateY(0);
 }
