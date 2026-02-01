@@ -92,7 +92,7 @@ main {
     background-position: center;
     z-index: -1;
     opacity: 0.3;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .content {
