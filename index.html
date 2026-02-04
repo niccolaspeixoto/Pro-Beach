@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fd3bbfe0b4.js" crossorigin="anonymous"></script>
+
     <title>Arena Pro Beach</title>
 </head>
 
@@ -19,12 +21,11 @@
 
         <div class="links">
             <a href="#inicio">Início</a>
-            <a href="">Sobre nós</a>
+            <a href="#about">Sobre nós</a>
             <a href="#services">Serviços</a>
-            <a href="">Planos</a>
             <a href="#dif">Diferenciais</a>
-            <a href="">Eventos</a>
-            <a href="">Contato</a>
+            <a href="#plans">Planos</a>
+            <a href="#contact">Contato</a>
         </div>
 
         <div class="cta">
@@ -34,9 +35,10 @@
 
     <main id="inicio">
         <div class="background-main"></div>
+
         <div class="content">
             <div class="destaque-top">
-                <p>O melhor espaço de lazer da região</p>
+                <p> <i class="fa-regular fa-star"></i> O melhor espaço de lazer da região</p>
             </div>
 
             <div class="text">
@@ -48,18 +50,42 @@
             </div>
 
             <div class="buttons-main">
-                <a href="">Reservar Agora</a>
+                <a href="">Reservar Agora <i class="fa-solid fa-arrow-right"></i></a>
                 <a href="">Ver Serviços</a>
             </div>
 
             <div class="destaque-bottom">
-                <p class="destaque-top">Localização privilegiada</p>
-                <p class="destaque-top"> Aberto todos os dias</p>
+                <p class="destaque-top"> <i class="fa-regular fa-map"></i> Localização privilegiada</p>
+                <p class="destaque-top"><i class="fa-regular fa-clock"></i> Aberto todos os dias</p>
             </div>
         </div>
     </main>
 
-    <section class="services" id="services">
+    <section>
+        <div class="about-us reveal" id="about">
+            <div class="text-about-us">
+                <p class="title">Sobre Nós</p>
+                <h1>Bem-vindo à <br>
+                    <span>Arena Pro Beach</span>
+                </h1>
+                <p>O maior complexo esportivo do ABC, um espaço dedicado ao esporte e à diversão!
+                    Localizada em um ambiente privilegiado de fácil acesso, nossa arena é o ponto de encontro ideal para
+                    amantes de atividades físicas ou para um Happy hour com os amigos.</p>
+                <p>Aqui, oferecemos uma variedade de modalidades esportivas que atendem a todos os gostos e idades. Você
+                    pode praticar futevôlei, vôlei, e beach tennis, além de participar de aulas de funcional, que
+                    garantem um treino completo e dinâmico. Nossas quadras são projetadas para proporcionar a melhor
+                    experiência, com infraestrutura de qualidade e segurança.</p>
+
+                <p>Mas não paramos por aí! Nossa arena também é perfeita para a realização de eventos. Com espaços
+                    equipados com churrasqueiras, você pode organizar festas, confraternizações ou celebrações
+                    especiais, enquanto desfruta de um ambiente descontraído e acolhedor.</p>
+
+                <p>Aproveite tudo o que temos a oferecer, e vem ser PRO!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services reveal" id="services">
         <div class="text-services">
             <p class="title">Nossos Serviços</p>
             <h1>Tudo para sua <span>diversão</span></h1>
@@ -126,7 +152,7 @@
     </section>
 
 
-    <section class="diferenciais" id="dif">
+    <section class="diferenciais reveal" id="dif">
         <div class="text-diferenciais">
             <p class="title">Diferenciais</p>
             <h1>Por que nos <span>escolher?</span></h1>
@@ -135,41 +161,49 @@
 
         <div class="wrapper-info">
             <div class="box-info">
+                <i class="fa-solid fa-dumbbell"></i>
                 <h3>GymPass & TotalPass</h3>
                 <p>Entre em contato para mais informações!</p>
             </div>
 
             <div class="box-info">
+                <i class="fa-solid fa-shield"></i>
                 <h3>Segurança</h3>
                 <p>Ambiente monitorado 24h com estacionamento seguro</p>
             </div>
 
             <div class="box-info">
+                <i class="fa-solid fa-clock"></i>
                 <h3>Horário Flexível</h3>
                 <p>Funcionamos todos os dias das 8h às 23h</p>
             </div>
 
             <div class="box-info">
+                <i class="fa-solid fa-map-pin"></i>
                 <h3>Fácil Acesso</h3>
                 <p>Localização privilegiada com fácil acesso</p>
             </div>
 
             <div class="box-info">
+                <i class="fa-solid fa-wifi"></i>
                 <h3>Wi-Fi Grátis</h3>
                 <p>Internet de alta velocidade em todo o espaço</p>
             </div>
 
             <div class="box-info">
+                <i class="fa-solid fa-car"></i>
                 <h3>Estacionamento</h3>
                 <p>Amplo estacionamento gratuito para clientes</p>
             </div>
 
             <div class="box-info">
+                <i class="fa-solid fa-people-group"></i>
                 <h3>Família</h3>
                 <p>Espaço kids para as crianças se divertirem</p>
             </div>
 
             <div class="box-info">
+                <i class="fa-solid fa-champagne-glasses"></i>
                 <h3>Pagode e Feijoada</h3>
                 <p>Todo sábado a partir das 12h</p>
             </div>
@@ -179,60 +213,133 @@
     </section>
 
 
-    <section class="plans">
+    <section class="plans reveal" id="plans">
+        <p class="title">Planos</p>
+        <h1>Escolha o melhor plano para <span>você</span></h1>
 
-    </section>
+        <div class="wrapper-plans">
+            <div class="box-plans">
+                <h2>Futevôlei</h2>
+                <p>Quadras de areia preparadas para treinos e partidas, ideais para quem busca diversão, condicionamento
+                    físico e competição em alto nível.</p>
 
-    <section class="contact">
-        <div class="left-content">
-            <p class="title-contact">Contato</p>
-            <h1>Faça sua <span>reserva</span></h1>
-            <p>Entre em contato conosco para agendar seu horário ou tirar suas dúvidas. <br>
-                Estamos prontos para atendê-lo!</p>
-
-            <div class="contact-info">
-                <div class="card-info">
-                    <p>Telefone</p>
-                    <p>(11) 99999-9999</p>
+                <div class="price-plans">
+                    <p>Planos a partir de</p>
+                    <h2>R$ 230,00</h2>
+                    <a href="">ALUGAR JÁ</a>
                 </div>
 
-                <div class="card-info">
-                    <p>WhatsApp</p>
-                    <p>(11) 99999-9999</p>
-                </div>
 
-                <div class="card-info">
-                    <p>E-mail</p>
-                    <p>contato@arenaplay.com.br</p>
-                </div>
+            </div>
 
-                <div class="card-info">
-                    <p>Endereço</p>
-                    <p>Rua das Palmeiras, 1234 - Centro</p>
-                </div>
+            <div class="box-plans">
+                <h2>Beachtênis</h2>
+                <p>Estrutura moderna para jogos dinâmicos e sociais, perfeita para todas as idades e níveis de
+                    experiência.</p>
 
-                <div class="card-info">
-                    <p>Horário</p>
-                    <p>Todos os dias: 8h às 23h</p>
+                <div class="price-plans">
+                    <p>Planos a partir de</p>
+                    <h2>R$ 220,00</h2>
+                    <a href="">ALUGAR JÁ</a>
+                </div>
+            </div>
+
+            <div class="box-plans">
+                <h2>Quadras society</h2>
+                <p>Campos com excelente gramado e iluminação, ideais para partidas entre amigos, treinos e campeonatos.
+                </p>
+
+                <div class="price-plans">
+                    <p>Planos a partir de</p>
+                    <h2>R$ 300,00</h2>
+                    <a href="">ALUGAR JÁ</a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="right-content">
-            <h1>Pronto para jogar?</h1>
-            <p>Reserve agora sua quadra e garanta seu horário. <br>
-                Atendimento rápido e sem burocracia!</p>
+    <section class="contact reveal" id="contact">
+        <div class="wrapper-content">
+            <div class="left-content">
+                <p class="title-contact">Contato</p>
+                <h1>Faça sua <span>reserva</span></h1>
+                <p>Entre em contato conosco para agendar seu horário ou tirar suas dúvidas. <br>
+                    Estamos prontos para atendê-lo!</p>
 
-            <a href="">Chamar no WhatsApp</a>
-            <a href="">Ligar Agora</a>
+                <div class="contact-info">
+                    <div class="card-info">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+
+                        <div class="text-contact">
+                            <p>Telefone</p>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="icon">
+                            <i class="fa-solid fa-mobile"></i>
+                        </div>
+
+                        <div class="text-contact">
+                            <p>WhatsApp</p>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="icon">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+
+                        <div class="text-contact">
+                        <p>E-mail</p>
+                        <p>contato@arenaplay.com.br</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="icon">
+                            <i class="fa-regular fa-map"></i>
+                        </div>
+
+                        <div class="text-contact">
+                        <p>Endereço</p>
+                        <p>Rua das Palmeiras, 1234 - Centro</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="icon">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+
+                        <div class="text-contact">
+                            <p>Horário</p>
+                            <p>Todos os dias: 8h às 23h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-content">
+                <h1>Pronto para jogar?</h1>
+                <p>Reserve agora sua quadra e garanta seu horário. <br>
+                    Atendimento rápido e sem burocracia!</p>
+
+                <a href="">Chamar no WhatsApp</a>
+                <a href="">Ligar Agora</a>
+            </div>
         </div>
 
     </section>
 
     <footer>
-        <img src="" alt="">
-        <p>© 2026 Arena Pro Beach. Todos os direitos reservados.</p>
+        <p>© 2026 Arena Pro Beach. <br>
+            Todos os direitos reservados.</p>
     </footer>
 </body>
-
+<script src="script.js"></script>
 </html>

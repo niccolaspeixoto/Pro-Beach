@@ -5,6 +5,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    scroll-padding-top: 15vh;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden;
+    
 }
 
 header {
@@ -12,11 +19,17 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    padding: 0 300px;
+    padding: 0 5%;
     background-color: #d4a91e;
     width: 100%;
+    max-width: 100vw;
     color: white;
     position: fixed;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    top: 0;
+    left: 0;
     z-index: 10;
     backdrop-filter: blur(5px);
 }
@@ -90,6 +103,7 @@ main {
     background-position: center;
     z-index: -1;
     opacity: 0.3;
+    transition: 0.5s;
 }
 
 .content {
@@ -99,6 +113,20 @@ main {
     height: 90vh;
     flex-direction: column;
     margin-top: 70px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecer 1.5s ease forwards;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.destaque-top i {
+    color: rgb(249, 115, 48);
 }
 
 .destaque-top {
@@ -118,8 +146,10 @@ main {
 .destaque-bottom {
     display: flex;
     gap: 50px;
+}
 
-
+.destaque-bottom i {
+    color: rgb(249, 115, 48);
 }
 
 .text {
@@ -127,12 +157,14 @@ main {
     font-size: 36px;
 }
 
+
 .text h1 {
 
     color: rgb(43, 51, 99);
     line-height: 1.1;
     font-weight: 1000;
     margin-top: 20px;
+
 }
 
 .text p {
@@ -157,7 +189,7 @@ main {
     text-decoration: none;
     color: white;
     background-color: rgb(249, 115, 48);
-    padding: 15px 30px;
+    padding: 15px 50px;
     border-radius: 10px;
     transition: 0.5s;
 }
@@ -167,6 +199,39 @@ main {
     transform: scale(1.1);
     transition: 0.3s;
 }
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+    padding: 40px 300px;
+    background-color: rgb(240, 239, 239);
+
+}
+
+.text-about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    align-items: center;
+}
+
+.text-about-us h1 {
+    font-size: 53px;
+    color: rgb(43, 51, 99);
+    line-height: 1.1;
+    width: 451px;
+}
+
+.text-about-us span {
+    color: rgb(249, 115, 48);
+}
+
+
 
 .text-services {
     display: flex;
@@ -222,7 +287,7 @@ main {
     transform: translateY(-6px);
 }
 
-.services-img{
+.services-img {
     overflow: hidden;
     border-radius: 12px;
     position: relative;
@@ -243,7 +308,7 @@ main {
     overflow: hidden;
 }
 
-.services-img img:hover{
+.services-img img:hover {
     transform: scale(1.05);
 }
 
@@ -307,13 +372,100 @@ main {
     padding: 20px;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    transition: 0.5s ease;
+}
+
+.box-info:hover {
+    background-color: rgb(249, 115, 48);
+    color: rgb(255, 255, 255);
+}
+
+.plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.plans h1 {
+    font-size: 62px;
+    color: rgb(43, 51, 99);
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.plans span {
+    color: rgb(249, 115, 48);
+}
+
+.wrapper-plans {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    position: relative;
+}
+
+.box-plans {
+    background-color: rgb(249, 115, 48);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    height: 50vh;
+    box-shadow: rgba(172, 114, 6, 0.3) 0px 7px 29px 0px;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.box-plans:hover {
+    box-shadow: rgba(241, 66, 2, 0.849) 0px 7px 29px 0px;
+    transform: translateY(-6px);
+}
+
+.box-plans h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.price-plans {
+    position: absolute;
+    bottom: 20px;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.price-plans a {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(43, 51, 99);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 12px;
+    width: fit-content;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.price-plans a:hover {
+    background-color: rgb(77, 89, 153);
 }
 
 .contact {
+    height: auto;
+    background-color: rgba(240, 239, 239);
+}
+
+.wrapper-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px 300px;
+    margin: 0px 300px;
     height: 80vh;
 }
 
@@ -323,7 +475,7 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    height: 90%;
+    height: 80vh;
 }
 
 .left-content span {
@@ -337,13 +489,38 @@ main {
 }
 
 .card-info {
+    display: flex;
+    align-items: center;
     margin: 20px 5px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(249, 115, 48);
+    padding: 10px;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+}
+
+.icon i {
+    color: white;
+    font-size: 20px;
+}
+
+.text-contact {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    font-weight: 500;
 }
 
 .right-content {
     width: 50%;
     background-color: rgb(251, 139, 82);
-    height: 75%;
+    height: 90%;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -363,4 +540,153 @@ main {
     text-decoration: none;
     border-radius: 20px;
     width: 100%;
+}
+
+footer {
+    background-color: rgb(43, 51, 99);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 2s ease;
+}
+
+.reveal.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries */
+@media (min-width:300px) and (max-width:430px) {
+    header {
+        width: 100vw;
+        min-height: 60px;
+        padding: 10px 15px;
+        font-size: 15px;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .logo h1 {
+        font-size: 15px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .cta a {
+        padding: 8px 12px;
+    font-size: 14px;
+    }
+
+    .text {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .buttons-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .destaque-bottom {
+        gap: 0px;
+        width: 298px;
+        text-align: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .about-us {
+        padding: 20px;
+        height: auto;
+    }
+
+    .text-about-us {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .text-about-us h1 {
+        font-size: 30px;
+    }
+
+    .text-about-us span {
+        font-size: 40px;
+    }
+
+    .wrapper-services {
+        grid-template-columns: 100%;
+    }
+
+    .text-services {
+        gap: 10px;
+    }
+
+    .box-details {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .diferenciais {
+        height: auto;
+    }
+
+    .wrapper-info {
+        grid-template-columns: 100%;
+    }
+
+
+
+    .plans h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .wrapper-plans {
+        flex-direction: column;
+    }
+
+    .contact {
+        height: auto;
+    }
+
+    .wrapper-content {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 20px;
+        gap: 20px;
+        height: auto;
+    }
+
+    .left-content {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .contact-info {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .right-content {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+        width: auto;
+    }
 }
