@@ -9,9 +9,10 @@
     scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
-    
+
 }
 
 header {
@@ -78,6 +79,7 @@ header {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    display: inline-block;
 }
 
 .cta a:hover {
@@ -393,6 +395,7 @@ main {
     color: rgb(43, 51, 99);
     line-height: 1.1;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .plans span {
@@ -411,10 +414,9 @@ main {
 .box-plans {
     background-color: rgb(249, 115, 48);
     color: white;
-    padding: 20px;
     border-radius: 20px;
     width: 300px;
-    height: 50vh;
+    height: 60vh;
     box-shadow: rgba(172, 114, 6, 0.3) 0px 7px 29px 0px;
     position: relative;
     transition: 0.5s ease;
@@ -423,6 +425,12 @@ main {
 .box-plans:hover {
     box-shadow: rgba(241, 66, 2, 0.849) 0px 7px 29px 0px;
     transform: translateY(-6px);
+}
+
+.box-plans img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
 }
 
 .box-plans h2 {
@@ -434,26 +442,121 @@ main {
 .price-plans {
     position: absolute;
     bottom: 20px;
-    top: 75%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
 
 .price-plans a {
+    display: inline-block;
     margin-top: 10px;
     padding: 10px;
     background-color: rgb(43, 51, 99);
     color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 12px;
-    width: fit-content;
+    width: 200px;
     font-weight: bold;
     transition: 0.5s;
 }
 
 .price-plans a:hover {
     background-color: rgb(77, 89, 153);
+}
+
+.location {
+    background-color: rgba(240, 239, 239);
+    margin: 50px 0;
+    padding: 50px;
+}
+
+.location-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.location h1 {
+    font-size: 62px;
+    color: rgb(43, 51, 99);
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.location span {
+    color: rgb(249, 115, 48);
+}
+
+.location nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 20px;
+}
+
+iframe {
+    width: 70%;
+    height: 500px;
+    box-shadow: rgba(145, 69, 25, 0.514) 0px 7px 29px 0px;
+    border-radius: 12px;
+}
+
+
+.wrapper-hour {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 100px 0;
+}
+
+.schedule-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.schedule-description h1 {
+    font-size: 62px;
+    color: rgb(43, 51, 99);
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.schedule-description span {
+    color: rgb(249, 115, 48);
+}
+
+
+.wrapper-hour {
+    gap: 50px;
+}
+
+.card-image {
+    width: 300px;
+    height: 600px;
+    transition: 0.4s ease;
+    border-radius: 12px;
+}
+
+.card-image:hover {
+    box-shadow: rgba(241, 66, 2, 0.849) 0px 7px 29px 0px;
+    transform: translateY(-6px);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
 }
 
 .contact {
@@ -560,6 +663,37 @@ footer {
     transform: translateY(0);
 }
 
+.btn-whatsapp{
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    border-radius: 50%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(24, 168, 5, 0.555) 0px 7px 29px 0px; ;
+    transition: 0.3s ease;
+}
+
+.btn-whatsapp i{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.btn-whatsapp:hover{
+    box-shadow: rgba(27, 201, 4, 0.925) 0px 7px 29px 0px; ;
+}
+
+.btn-whatsapp:active{
+    background-color: rgb(14, 59, 14);
+}
+
 /* Media Queries */
 @media (min-width:300px) and (max-width:430px) {
     header {
@@ -585,7 +719,8 @@ footer {
 
     .cta a {
         padding: 8px 12px;
-    font-size: 14px;
+        font-size: 14px;
+        display: inline-block;
     }
 
     .text {
@@ -657,6 +792,18 @@ footer {
         flex-direction: column;
     }
 
+    iframe {
+        width: 170%;
+    }
+
+    .schedule-description {
+        padding: 20px;
+    }
+
+    .wrapper-hour {
+        grid-template-columns: auto;
+    }
+
     .contact {
         height: auto;
     }
@@ -688,5 +835,125 @@ footer {
         align-items: center;
         margin: 20px 0;
         width: auto;
+    }
+}
+
+@media (min-width:500px) and (max-width:1100px) {
+
+    /* ajustes para tablets (entre mobile e desktop) */
+    header {
+        padding: 0 3%;
+        height: 8vh;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .links {
+        display: none
+    }
+
+    .text {
+        font-size: 30px;
+        padding: 0 20px;
+    }
+
+    .buttons-main {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .about-us {
+        padding: 30px 200px;
+    }
+
+    .text-about-us {
+        width: auto;
+    }
+
+    .text-about-us h1 {
+        font-size: 45px;
+    }
+
+    .wrapper-services {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .box-services {
+        width: 90%;
+        height: 500px;
+    }
+
+    .wrapper-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .diferenciais {
+        height: auto;
+    }
+
+    .plans h1,
+    .text-services h1,
+    .text-diferenciais h1 {
+        font-size: 55px;
+        text-align: center;
+    }
+
+    .wrapper-plans {
+        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .wrapper-hour {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wrapper-content {
+        margin: 0 30px;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+@media (min-width:1200px) and (max-width:1600px) {
+    .diferenciais {
+        height: auto;
+    }
+
+    .box-services{
+        width: 362px;
+        height: 500px;
+    }
+
+    .wrapper-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wrapper-plans {
+        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wrapper-content{
+        margin: 0 119px
     }
 }
