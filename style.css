@@ -332,7 +332,6 @@ main {
 }
 
 .diferenciais {
-    background-color: rgb(240, 239, 239);
     display: flex;
     align-items: center;
     gap: 30px;
@@ -382,12 +381,22 @@ main {
     color: rgb(255, 255, 255);
 }
 
+.wrapper-class {
+    margin-top: 70px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .plans {
+    background-color: rgb(240, 239, 239);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
     margin-bottom: 50px;
+
 }
 
 .plans h1 {
@@ -407,7 +416,7 @@ main {
     gap: 30px;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin: 70px;
     position: relative;
 }
 
@@ -663,7 +672,7 @@ footer {
     transform: translateY(0);
 }
 
-.btn-whatsapp{
+.btn-whatsapp {
     position: fixed;
     bottom: 35px;
     right: 35px;
@@ -675,22 +684,24 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: rgba(24, 168, 5, 0.555) 0px 7px 29px 0px; ;
+    box-shadow: rgba(24, 168, 5, 0.555) 0px 7px 29px 0px;
+    ;
     transition: 0.3s ease;
 }
 
-.btn-whatsapp i{
+.btn-whatsapp i {
     color: white;
     font-size: 50px;
     text-align: center;
     padding: 10px;
 }
 
-.btn-whatsapp:hover{
-    box-shadow: rgba(27, 201, 4, 0.925) 0px 7px 29px 0px; ;
+.btn-whatsapp:hover {
+    box-shadow: rgba(27, 201, 4, 0.925) 0px 7px 29px 0px;
+    ;
 }
 
-.btn-whatsapp:active{
+.btn-whatsapp:active {
     background-color: rgb(14, 59, 14);
 }
 
@@ -938,7 +949,7 @@ footer {
         height: auto;
     }
 
-    .box-services{
+    .box-services {
         width: 362px;
         height: 500px;
     }
@@ -953,7 +964,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .wrapper-content{
+    .wrapper-content {
         margin: 0 119px
     }
 }
