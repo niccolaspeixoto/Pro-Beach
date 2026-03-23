@@ -87,6 +87,32 @@ header {
     color: orangered;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
 main {
     position: relative;
     width: 100%;
@@ -524,7 +550,7 @@ iframe {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 100px 0;
+    margin: 50px 0;
 }
 
 .schedule-description {
@@ -578,7 +604,7 @@ iframe {
     justify-content: center;
     align-items: center;
     margin: 0px 300px;
-    height: 80vh;
+    height: 100vh;
 }
 
 .left-content {
@@ -658,7 +684,72 @@ footer {
     background-color: rgb(43, 51, 99);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 100px;
+    gap: 40px;
+}
+
+.footer-info {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-info p {
+    margin: 10px 0;
+}
+
+.footer-sociais {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-sociais h3 {
+    margin-bottom: 15px;
+    color: rgb(249, 115, 48);
+}
+
+.sociais-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.sociais-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(249, 115, 48, 0.2);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.sociais-icons a:hover {
+    background-color: rgb(249, 115, 48);
+    color: white;
+    transform: scale(1.1);
+}
+
+.sociais-icons i {
+    font-size: 20px;
+}
+
+footer a {
+    color: rgb(249, 115, 48);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
 }
 
 .reveal {
@@ -726,6 +817,28 @@ footer {
 
     .links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #d4a91e;
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 9;
+    }
+
+    .links.active {
+        display: flex;
+    }
+
+    .links a {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     .cta a {
@@ -739,6 +852,10 @@ footer {
         padding: 10px;
     }
 
+    .text h1 {
+        font-size: 28px;
+    }
+
     .buttons-main {
         flex-direction: column;
         text-align: center;
@@ -746,10 +863,14 @@ footer {
 
     .destaque-bottom {
         gap: 0px;
-        width: 298px;
+        width: 100%;
         text-align: center;
         align-items: center;
         gap: 10px;
+    }
+
+    .content{
+        padding: 20px;
     }
 
     .about-us {
@@ -804,7 +925,7 @@ footer {
     }
 
     iframe {
-        width: 170%;
+        width: 100%;
     }
 
     .schedule-description {
@@ -813,6 +934,12 @@ footer {
 
     .wrapper-hour {
         grid-template-columns: auto;
+    }
+
+    .card-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
     }
 
     .contact {
@@ -847,20 +974,38 @@ footer {
         margin: 20px 0;
         width: auto;
     }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-sociais {
+        text-align: center;
+    }
+
+    .sociais-icons {
+        justify-content: center;
+    }
 }
 
-@media (min-width:500px) and (max-width:1100px) {
+@media (min-width:500px) and (max-width:1099px) {
 
     /* ajustes para tablets (entre mobile e desktop) */
     header {
-        padding: 0 3%;
-        height: 8vh;
+        padding: 20px 3%;
+        height: 11vh;
         justify-content: center;
         gap: 20px;
     }
 
     .logo img {
-        height: 50px;
+        height: 30px;
     }
 
     .logo h1 {
@@ -891,6 +1036,11 @@ footer {
 
     .text-about-us h1 {
         font-size: 45px;
+    }
+
+    .text-about-us p {
+        font-size: 15px;
+        line-height: 1.6;
     }
 
     .wrapper-services {
@@ -942,9 +1092,136 @@ footer {
         width: 100%;
         margin: 20px 0;
     }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-sociais {
+        text-align: center;
+    }
+
+    .sociais-icons {
+        justify-content: center;
+    }
 }
 
-@media (min-width:1200px) and (max-width:1600px) {
+@media (min-width:1100px) and (max-width:1399px) {
+    /* Ajustes para telas grandes de notebooks/monitores pequenos (1100px até 1399px) */
+    /* Mantendo proporção da view de 1080px */
+    
+    .logo img {
+        height: 35px;
+    }
+
+    .about-us {
+        padding: 30px 250px;
+    }
+
+    .text-about-us {
+        width: auto;
+    }
+
+    .text-about-us h1 {
+        font-size: 50px;
+    }
+
+    .text-about-us p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .wrapper-services {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .box-services {
+        width: 90%;
+        height: 500px;
+    }
+
+    .wrapper-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .diferenciais {
+        height: auto;
+    }
+
+    .box-info {
+        gap: 15px;
+    }
+
+    .box-info i {
+        font-size: 32px;
+    }
+
+    .plans h1,
+    .text-services h1,
+    .text-diferenciais h1 {
+        font-size: 58px;
+        text-align: center;
+    }
+
+    .wrapper-plans {
+        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .wrapper-hour {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wrapper-content {
+        margin: 0 80px;
+    }
+
+    .left-content,
+    .right-content {
+        width: 48%;
+        margin: 20px 0;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-info {
+        text-align: left;
+        flex: 1;
+    }
+
+    .footer-sociais {
+        text-align: right;
+        flex: 1;
+    }
+
+    .sociais-icons {
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width:1400px) and (max-width:1600px) {
+    .logo img {
+        height: 30px;
+    }
+
+    
     .diferenciais {
         height: auto;
     }
@@ -965,6 +1242,6 @@ footer {
     }
 
     .wrapper-content {
-        margin: 0 119px
+        margin: 0 119px;
     }
 }
