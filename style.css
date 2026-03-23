@@ -367,6 +367,10 @@ main {
     padding: 15px;
 }
 
+.diferenciais i{
+    height: 10px;
+}
+
 .text-diferenciais {
     text-align: center;
     display: flex;
@@ -1157,11 +1161,11 @@ footer a:hover {
     }
 
     .box-info {
-        gap: 15px;
+        gap: 10px;
     }
 
     .box-info i {
-        font-size: 32px;
+        font-size: 20px;
     }
 
     .plans h1,
