@@ -143,6 +143,23 @@ main {
     transition: 0.5s;
 }
 
+.background-main {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+}
+
+.bg1 { opacity: 1; }
+.bg2 { opacity: 0; }
+
 .content {
     display: flex;
     justify-content: center;
