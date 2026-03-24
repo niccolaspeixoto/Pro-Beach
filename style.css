@@ -52,8 +52,18 @@ header {
 }
 
 .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #d4a91e;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.links.active {
     display: flex;
-    gap: 20px;
 }
 
 .links a {
@@ -66,7 +76,6 @@ header {
 
 .links a:hover {
     color: rgb(255, 92, 33);
-    transform: scale(1.1);
 }
 
 .cta a {
@@ -126,7 +135,7 @@ main {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: url('https://lh3.googleusercontent.com/p/AF1QipMUDmA1JpYuDmJZg-GjtBwNHhG096sssFQPQ_jM=s680-w680-h510-rw');
+    background-image: url('./assets/lanchonete.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -228,6 +237,18 @@ main {
     transition: 0.3s;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ESSENCIAL */
+   object-position: center center; /* padrão */
+  z-index: -1;
+  opacity: 0.3;
+}
+
 .about-us {
     display: flex;
     flex-direction: column;
@@ -236,7 +257,7 @@ main {
     justify-content: center;
     height: auto;
     padding: 40px 300px;
-    background-color: rgb(240, 239, 239);
+    background-image: rgb(240, 239, 239);
 
 }
 
@@ -367,7 +388,7 @@ main {
     padding: 15px;
 }
 
-.diferenciais i{
+.diferenciais i {
     height: 10px;
 }
 
@@ -661,7 +682,7 @@ iframe {
 .right-content {
     width: 50%;
     background-color: rgb(251, 139, 82);
-    height: 90%;
+    height: 65%;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -688,20 +709,21 @@ footer {
     color: white;
     text-align: center;
     padding: 40px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 100px;
+    width: 90%;
     gap: 40px;
 }
 
 .footer-info {
     flex: 1;
-    text-align: left;
+    text-align: center;
 }
 
 .footer-info p {
@@ -710,7 +732,7 @@ footer {
 
 .footer-sociais {
     flex: 1;
-    text-align: right;
+    text-align: center;
 }
 
 .footer-sociais h3 {
@@ -721,7 +743,7 @@ footer {
 .sociais-icons {
     display: flex;
     gap: 20px;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .sociais-icons a {
@@ -758,7 +780,7 @@ footer a:hover {
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: 2s ease;
+    transition: 3s ease;
 }
 
 .reveal.ativo {
@@ -827,7 +849,7 @@ footer a:hover {
         background-color: #d4a91e;
         flex-direction: column;
         padding: 20px 0;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 9;
     }
 
@@ -837,7 +859,7 @@ footer a:hover {
 
     .links a {
         padding: 10px 20px;
-        border-bottom: 1px solid rgba(255,255,255,0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .hamburger {
@@ -856,7 +878,7 @@ footer a:hover {
     }
 
     .text h1 {
-        font-size: 28px;
+        font-size: 45px;
     }
 
     .buttons-main {
@@ -872,7 +894,7 @@ footer a:hover {
         gap: 10px;
     }
 
-    .content{
+    .content {
         padding: 20px;
     }
 
@@ -982,6 +1004,7 @@ footer a:hover {
         flex-direction: column;
         text-align: center;
         gap: 20px;
+        width: auto;
     }
 
     .footer-info {
@@ -1016,7 +1039,32 @@ footer a:hover {
     }
 
     .links {
-        display: none
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #d4a91e;
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 9;
+        
+    }
+
+    .links.active {
+        display: flex;
+        
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .links a {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
     }
 
     .text {
@@ -1118,10 +1166,24 @@ footer a:hover {
 @media (min-width:1100px) and (max-width:1399px) {
     /* Ajustes para telas grandes de notebooks/monitores pequenos (1100px até 1399px) */
     /* Mantendo proporção da view de 1080px */
-    
+
     .logo img {
         height: 35px;
     }
+
+    .links {
+        display: flex;          /* 🔥 volta a aparecer */
+        position: static;       /* 🔥 volta pro fluxo do header */
+        flex-direction: row;    /* 🔥 horizontal */
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .hamburger {
+        display: none;          /* 🔥 some no desktop */
+    }
+
 
     .about-us {
         padding: 30px 250px;
@@ -1224,7 +1286,7 @@ footer a:hover {
         height: 30px;
     }
 
-    
+
     .diferenciais {
         height: auto;
     }
@@ -1246,5 +1308,22 @@ footer a:hover {
 
     .wrapper-content {
         margin: 0 119px;
+    }
+}
+
+@media (min-width:1100px) {
+    .links {
+        display: flex;
+        position: static;        /* 🔥 VOLTA PRO HEADER */
+        flex-direction: row;     /* 🔥 HORIZONTAL */
+        width: auto;             /* 🔥 NÃO ocupa tudo */
+        gap: 20px;               /* 🔥 ESPAÇAMENTO ENTRE LINKS */
+        padding: 0;
+        background: none;
+        box-shadow: none;
+    }
+
+    .hamburger {
+        display: none;
     }
 }
