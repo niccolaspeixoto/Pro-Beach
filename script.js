@@ -14,7 +14,9 @@ elementos.forEach((el) => {
 });
 
 
-//troca de imagem do main
+// ==============================
+// SLIDER COM TRANSIÇÃO SUAVE
+// ==============================
 
 const imagens = [
     "./assets/lanchonete.jpg",
@@ -22,29 +24,41 @@ const imagens = [
     "./assets/churrasqueira-iphone.jpg",
     "./assets/quadras-futevolei.jpg",
     "./assets/quadra-society.jpg"
-]
+];
 
 let index = 0;
-const banner = document.querySelector('.background-main');
+let ativo = 1;
 
-function trocarImagem() {
-    banner.style.opacity = 0;
+// seleciona as duas camadas
+const bg1 = document.querySelector('.bg1');
+const bg2 = document.querySelector('.bg2');
 
-    setTimeout(() => {
-    banner.style.backgroundImage = `url(${imagens[index]})`;
-    banner.style.opacity = 0.3;
-  }, 500);
-}
-
-// troca a cada 5 segundos
-setInterval(() => {
-  index++;
-  if (index >= imagens.length) index = 0;
-  trocarImagem();
-}, 5000);
+// pré-carregamento (evita travadas no mobile)
+imagens.forEach(src => {
+    const img = new Image();
+    img.src = src;
+});
 
 // imagem inicial
-trocarImagem();
+bg1.style.backgroundImage = `url(${imagens[0]})`;
+
+// troca automática
+setInterval(() => {
+    index = (index + 1) % imagens.length;
+
+    if (ativo === 1) {
+        bg2.style.backgroundImage = `url(${imagens[index]})`;
+        bg2.style.opacity = 1;
+        bg1.style.opacity = 0;
+        ativo = 2;
+    } else {
+        bg1.style.backgroundImage = `url(${imagens[index]})`;
+        bg1.style.opacity = 1;
+        bg2.style.opacity = 0;
+        ativo = 1;
+    }
+
+}, 5000);
 
 // menu hamburguer
 const hamburger = document.querySelector('.hamburger');
