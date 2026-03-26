@@ -839,7 +839,7 @@ footer a:hover {
 }
 
 /* Media Queries */
-@media (min-width:300px) and (max-width:430px) {
+@media (min-width:300px) and (max-width:499px) {
     header {
         width: 100vw;
         min-height: 60px;
