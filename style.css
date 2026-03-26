@@ -1269,12 +1269,19 @@ footer a:hover {
 
     .wrapper-content {
         margin: 0 80px;
+        height: auto;
     }
 
     .left-content,
     .right-content {
         width: 48%;
         margin: 20px 0;
+        height: 600px;
+    }
+
+    .left-content{
+        height: auto;
+
     }
 
     .footer-content {
