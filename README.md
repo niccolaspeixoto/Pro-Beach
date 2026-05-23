@@ -35,8 +35,8 @@ O objetivo do projeto foi desenvolver uma interface atrativa, responsiva e prepa
 ---
 
 ## 📸 Preview
-
-Adicione imagens do projeto para deixar o repositório mais profissional.
+Abaixo estão imagens de como o projeto ficou.
+Dê uma olhada!😉
 
 <img width="386" height="838" alt="mobile-probeach" src="https://github.com/user-attachments/assets/1087e975-4c2d-4eb0-b408-e7d18b3e4926" />
 <img width="1856" height="925" alt="Capturar" src="https://github.com/user-attachments/assets/add8f480-5cf0-4d2a-8615-f8325735bc51" />
