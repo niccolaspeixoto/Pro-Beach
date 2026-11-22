@@ -4,459 +4,699 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/fd3bbfe0b4.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="/assets/logo pro beach.png" type="image/png">
+    <script>document.documentElement.classList.add('js')</script>
+    <title>Arena Pro Beach ·Complexo esportivo em São Bernardo do Campo</title>
+    <meta name="description"
+        content="O maior complexo esportivo do ABC: futevôlei, beach tennis, vôlei, society, funcional beach, churrasqueiras e lanchonete. Aberto todos os dias em São Bernardo do Campo.">
+    <meta name="theme-color" content="#0E1A2B">
 
-    <title>Arena Pro Beach</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Arena Pro Beach">
+    <meta property="og:description" content="Quadras de areia e society, aulas, churrasqueiras e lanchonete. Vem ser PRO!">
+    <meta property="og:image" content="./assets/img/areia-2.webp">
+    <meta property="og:locale" content="pt_BR">
+
+    <link rel="icon" href="./assets/logo%20pro%20beach.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fd3bbfe0b4.js" crossorigin="anonymous"></script>
+
+    <link rel="preload" as="image" href="./assets/img/areia-2.webp" fetchpriority="high">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsActivityLocation",
+        "name": "Arena Pro Beach",
+        "image": "./assets/img/areia-2.webp",
+        "telephone": "+55 11 95021-4708",
+        "email": "arena_probeach@outlook.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Cézar Magnani, 840 - Paulicéia",
+            "addressLocality": "São Bernardo do Campo",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "23:59" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "20:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "18:00" }
+        ],
+        "sameAs": ["https://www.instagram.com/arena_probeach/", "https://www.facebook.com/arenaprobeach/"]
+    }
+    </script>
 </head>
 
 <body>
-    <div class="btn-whatsapp">
-        <a href="https://wa.me/5511950214708?text=Olá, gostaria de mais informações!">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    </div>
+    <!-- ============ NAVBAR ============ -->
+    <header class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="#inicio" class="nav__brand" aria-label="Arena Pro Beach - início">
+                <img src="./assets/img/logo.webp" alt="" width="40" height="40">
+                <span>Arena <strong>Pro Beach</strong></span>
+            </a>
 
-    <header>
-        <div class="logo">
-            <img src="./assets/logo pro beach.jpg" alt="logo pro beach">
-            <h1>Arena Pro Beach</h1>
-        </div>
+            <nav class="nav__links" aria-label="Principal">
+                <a href="#sobre">Sobre</a>
+                <a href="#estrutura">Estrutura</a>
+                <a href="#aulas">Aulas</a>
+                <a href="#agenda">Agenda</a>
+                <a href="#cardapio">Cardápio</a>
+                <a href="#contato">Contato</a>
+            </nav>
 
+            <a class="btn btn--primary btn--sm nav__cta"
+                href="https://wa.me/5511950214708?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20um%20hor%C3%A1rio."
+                target="_blank" rel="noopener">
+                Reservar <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
-
-        <div class="links">
-            <a href="#inicio">Início</a>
-            <a href="#about">Sobre nós</a>
-            <a href="#services">Serviços</a>
-            <a href="#aulas">Aulas</a>
-            <a href="#dif">Diferenciais</a>
-            <a href="#location">Localização</a>
-            <a href="#contact">Contato</a>
-        </div>
-
-        <div class="cta">
-            <a href="https://wa.me/5511950214708?text=Olá, gostaria de mais informações!">Reservar Agora!</a>
-        </div>
-
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <main id="inicio">
-        <div class="background-main">
-            <div class="bg bg1"></div>
-            <div class="bg bg2"></div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+        <nav aria-label="Menu mobile">
+            <a href="#sobre">Sobre</a>
+            <a href="#estrutura">Estrutura</a>
+            <a href="#aulas">Aulas</a>
+            <a href="#agenda">Agenda</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <a class="btn btn--primary btn--lg"
+            href="https://wa.me/5511950214708?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20um%20hor%C3%A1rio."
+            target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Reservar pelo WhatsApp
+        </a>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+        <div class="hero__media" aria-hidden="true">
+            <div class="hero__slide is-active" style="background-image:url('./assets/img/areia-2.webp')"></div>
+            <div class="hero__slide" data-src="./assets/img/society.webp"></div>
+            <div class="hero__slide" data-src="./assets/img/areia-1.webp"></div>
+            <div class="hero__slide" data-src="./assets/img/lanchonete.webp"></div>
+            <div class="hero__slide" data-src="./assets/img/churrasqueira.webp"></div>
+        </div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+
+        <div class="container hero__content" id="conteudo">
+            <span class="badge badge--glass" data-reveal>
+                <span class="status-dot" data-open-dot></span>
+                <span data-open-label>O maior complexo esportivo do ABC</span>
+            </span>
+
+            <h1 class="hero__title" data-reveal>
+                Sua diversão<br>
+                começa <span class="text-gradient">aqui.</span>
+            </h1>
+
+            <p class="hero__lead" data-reveal>
+                Quadras de areia e society, aulas com professores, churrasqueiras e lanchonete.
+                Tudo em um só lugar para jogar, treinar e curtir com quem você gosta.
+            </p>
+
+            <div class="hero__actions" data-reveal>
+                <a class="btn btn--primary btn--lg"
+                    href="https://wa.me/5511950214708?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20um%20hor%C3%A1rio."
+                    target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i> Reservar agora
+                </a>
+                <a class="btn btn--glass btn--lg" href="./CARDAPIO_ARENA_PRO_BEACH_VIRTUAL.pdf" target="_blank"
+                    rel="noopener">
+                    <i class="fa-solid fa-utensils"></i> Ver cardápio
+                </a>
+            </div>
+
+            <ul class="hero__facts" data-reveal>
+                <li><i class="fa-regular fa-calendar"></i> Aberto todos os dias</li>
+                <li><i class="fa-solid fa-location-dot"></i> Paulicéia · São Bernardo</li>
+                <li><i class="fa-solid fa-dumbbell"></i> Gympass &amp; TotalPass</li>
+            </ul>
         </div>
 
-        <div class="content">
-            <div class="destaque-top">
-                <p> <i class="fa-regular fa-star"></i> O melhor espaço de lazer da região</p>
-            </div>
+        <div class="hero__dots" role="tablist" aria-label="Fotos do espaço"></div>
+    </section>
 
-            <div class="text">
-                <h1>Sua diversão começa <br>
-                    <span>aqui!</span>
-                </h1>
-                <p>Quadras de society, quadras de areia, churrasqueiras e lanchonete. <br>
-                    Tudo que você precisa para momentos inesquecíveis com família e amigos.</p>
-            </div>
-
-            <div class="buttons-main">
-                <a href="https://wa.me/5511950214708?text=Olá, gostaria de mais informações!">Reservar Agora <i
-                        class="fa-solid fa-arrow-right"></i></a>
-                <a href="#services">Ver Serviços</a>
-            </div>
-
-            <div class="buttons-main">
-                <a href="/CARDAPIO_ARENA_PRO_BEACH_VIRTUAL.pdf" target="_blank">Ver Cardápio</a>
-            </div>
-
-            <div class="destaque-bottom">
-                <p class="destaque-top"> <i class="fa-regular fa-map"></i> Localização privilegiada</p>
-                <p class="destaque-top"><i class="fa-regular fa-clock"></i> Aberto todos os dias</p>
-            </div>
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+            <span>Futevôlei</span><i>✦</i><span>Beach Tennis</span><i>✦</i><span>Vôlei de Praia</span><i>✦</i>
+            <span>Society</span><i>✦</i><span>Funcional Beach</span><i>✦</i><span>Churrasqueiras</span><i>✦</i>
+            <span>Pagode &amp; Feijoada</span><i>✦</i><span>Happy Hour</span><i>✦</i>
+            <span>Futevôlei</span><i>✦</i><span>Beach Tennis</span><i>✦</i><span>Vôlei de Praia</span><i>✦</i>
+            <span>Society</span><i>✦</i><span>Funcional Beach</span><i>✦</i><span>Churrasqueiras</span><i>✦</i>
+            <span>Pagode &amp; Feijoada</span><i>✦</i><span>Happy Hour</span><i>✦</i>
         </div>
+    </div>
+
+    <main>
+        <!-- ============ SOBRE ============ -->
+        <section class="section about" id="sobre">
+            <div class="container about__grid">
+                <div class="about__text">
+                    <span class="eyebrow" data-reveal>Sobre nós</span>
+                    <h2 class="section-title" data-reveal>Esporte, lazer e resenha <em>no mesmo lugar.</em></h2>
+                    <p data-reveal>
+                        A Arena Pro Beach é o ponto de encontro de quem ama esporte e de quem só quer um bom
+                        happy hour com os amigos. Fácil de chegar, com estrutura de qualidade e segurança.
+                    </p>
+                    <p data-reveal>
+                        Aqui você pratica <strong>futevôlei, vôlei, beach tennis, funcional beach e futebol</strong>,
+                        organiza seu evento nas churrasqueiras e repõe as energias na lanchonete.
+                        Aproveite tudo o que temos e <strong>vem ser PRO!</strong>
+                    </p>
+
+                    <dl class="stats" data-reveal>
+                        <div class="stat">
+                            <dt>Dias por semana</dt>
+                            <dd><span data-count="7">7</span></dd>
+                        </div>
+                        <div class="stat">
+                            <dt>Modalidades</dt>
+                            <dd><span data-count="5">5</span></dd>
+                        </div>
+                        <div class="stat">
+                            <dt>Estacionamento grátis</dt>
+                            <dd><span data-count="2">2</span>h</dd>
+                        </div>
+                        <div class="stat">
+                            <dt>Seg. a sex. até</dt>
+                            <dd>00h</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="about__media" data-reveal>
+                    <div class="video-card">
+                        <video class="video-card__video" muted loop playsinline preload="none"
+                            poster="./assets/img/drone-poster.jpg" data-lazy-video
+                            aria-label="Vídeo aéreo das quadras de areia da Arena Pro Beach">
+                            <source data-src="./assets/img/drone.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-card__tag">
+                            <i class="fa-solid fa-video"></i> Vista aérea da arena
+                        </div>
+                    </div>
+                    <div class="float-card float-card--about">
+                        <div class="float-card__icon"><i class="fa-solid fa-trophy"></i></div>
+                        <div>
+                            <strong>Maior complexo do ABC</strong>
+                            <span>Areia peneirada e rede profissional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ESTRUTURA (BENTO) ============ -->
+        <section class="section section--tint" id="estrutura">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow" data-reveal>Estrutura</span>
+                        <h2 class="section-title" data-reveal>Tudo para o seu <em>jogo e o pós-jogo.</em></h2>
+                    </div>
+                    <p class="section-head__aside" data-reveal>
+                        Estrutura completa para você, sua turma e sua família aproveitarem cada minuto.
+                    </p>
+                </div>
+
+                <div class="bento">
+                    <article class="bento__item bento__item--xl" data-reveal>
+                        <img src="./assets/img/areia-1-sm.webp"
+                            srcset="./assets/img/areia-1-sm.webp 900w, ./assets/img/areia-1.webp 1920w"
+                            sizes="(max-width: 900px) 100vw, 60vw" alt="Quadras de areia da Arena Pro Beach"
+                            loading="lazy">
+                        <div class="bento__body">
+                            <span class="chip chip--sun">Areia</span>
+                            <h3>Quadras de Areia</h3>
+                            <p>Areia de qualidade e estrutura completa para futevôlei, vôlei e beach tennis.</p>
+                            <ul class="tags">
+                                <li>Areia peneirada</li>
+                                <li>Rede profissional</li>
+                                <li>Estrutura completa</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="bento__item bento__item--tall" data-reveal>
+                        <img src="./assets/img/society-sm.webp"
+                            srcset="./assets/img/society-sm.webp 900w, ./assets/img/society.webp 1920w"
+                            sizes="(max-width: 900px) 100vw, 40vw" alt="Quadra de society com grama sintética"
+                            loading="lazy">
+                        <div class="bento__body">
+                            <span class="chip chip--ocean">Society</span>
+                            <h3>Quadras de Society</h3>
+                            <p>Grama sintética de alta qualidade, iluminação profissional e vestiários.</p>
+                            <ul class="tags">
+                                <li>Grama sintética</li>
+                                <li>Iluminação LED</li>
+                                <li>Vestiário</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="bento__item" data-reveal>
+                        <img src="./assets/img/churrasqueira-sm.webp" alt="Espaço com churrasqueira" loading="lazy">
+                        <div class="bento__body">
+                            <span class="chip">Eventos</span>
+                            <h3>Churrasqueiras</h3>
+                            <p>Espaços privativos com área coberta, mesas, bancos, pia e balcão.</p>
+                        </div>
+                    </article>
+
+                    <article class="bento__item" data-reveal>
+                        <img src="./assets/img/lanchonete-sm.webp" alt="Lanchonete da arena" loading="lazy">
+                        <div class="bento__body">
+                            <span class="chip">Comer &amp; beber</span>
+                            <h3>Lanchonete</h3>
+                            <p>Porções, hambúrgueres, açaí, sucos naturais e bebidas geladas.</p>
+                            <a class="link-arrow" href="#cardapio">Ver destaques <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="bento__item bento__item--cta" data-reveal>
+                        <div class="bento__cta">
+                            <i class="fa-solid fa-champagne-glasses"></i>
+                            <h3>Vai fazer um evento?</h3>
+                            <p>Aniversários, confraternizações e festas da firma. Fale com a gente e monte o seu.</p>
+                            <a class="btn btn--dark"
+                                href="https://wa.me/5511950214708?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20evento%20na%20Arena%20Pro%20Beach."
+                                target="_blank" rel="noopener">Orçar evento <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ AULAS ============ -->
+        <section class="section" id="aulas">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow" data-reveal>Aulas</span>
+                        <h2 class="section-title" data-reveal>Treine com quem <em>entende de areia.</em></h2>
+                    </div>
+                    <p class="section-head__aside" data-reveal>
+                        Turmas de manhã e à noite com nossos professores. Aceitamos
+                        <strong>Gympass</strong> e <strong>TotalPass</strong>.
+                    </p>
+                </div>
+
+                <div class="classes" data-reveal>
+                    <article class="class-card">
+                        <button class="class-card__poster" data-lightbox="./assets/img/aula-futevolei.webp"
+                            aria-label="Ampliar horários de futevôlei">
+                            <img src="./assets/img/aula-futevolei.webp" alt="Horários das aulas de futevôlei"
+                                loading="lazy" width="720" height="1280">
+                            <span class="class-card__zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </button>
+                        <div class="class-card__body">
+                            <h3>Futevôlei</h3>
+                            <a class="btn btn--primary btn--block"
+                                href="https://wa.me/5511950214708?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20de%20futev%C3%B4lei."
+                                target="_blank" rel="noopener">Agendar aula</a>
+                        </div>
+                    </article>
+
+                    <article class="class-card">
+                        <button class="class-card__poster" data-lightbox="./assets/img/aula-beach-tennis.webp"
+                            aria-label="Ampliar horários de beach tennis">
+                            <img src="./assets/img/aula-beach-tennis.webp" alt="Horários das aulas de beach tennis"
+                                loading="lazy" width="713" height="1280">
+                            <span class="class-card__zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </button>
+                        <div class="class-card__body">
+                            <h3>Beach Tennis</h3>
+                            <a class="btn btn--primary btn--block"
+                                href="https://wa.me/5511950214708?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20de%20beach%20tennis."
+                                target="_blank" rel="noopener">Agendar aula</a>
+                        </div>
+                    </article>
+
+                    <article class="class-card">
+                        <button class="class-card__poster" data-lightbox="./assets/img/aula-funcional.webp"
+                            aria-label="Ampliar horários de funcional beach">
+                            <img src="./assets/img/aula-funcional.webp" alt="Horários das aulas de funcional beach"
+                                loading="lazy" width="712" height="1280">
+                            <span class="class-card__zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </button>
+                        <div class="class-card__body">
+                            <h3>Funcional Beach</h3>
+                            <a class="btn btn--primary btn--block"
+                                href="https://wa.me/5511950214708?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20de%20funcional%20beach."
+                                target="_blank" rel="noopener">Agendar aula</a>
+                        </div>
+                    </article>
+
+                    <article class="class-card">
+                        <button class="class-card__poster" data-lightbox="./assets/img/aula-volei.webp"
+                            aria-label="Ampliar horários de vôlei">
+                            <img src="./assets/img/aula-volei.webp" alt="Horários das aulas de vôlei" loading="lazy"
+                                width="800" height="1000">
+                            <span class="class-card__zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </button>
+                        <div class="class-card__body">
+                            <h3>Vôlei</h3>
+                            <a class="btn btn--primary btn--block"
+                                href="https://wa.me/5511950214708?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20de%20v%C3%B4lei."
+                                target="_blank" rel="noopener">Agendar aula</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ AGENDA ============ -->
+        <section class="section section--ink agenda" id="agenda">
+            <div class="container agenda__grid">
+                <div class="agenda__text">
+                    <span class="eyebrow eyebrow--light" data-reveal>Agenda da semana</span>
+                    <h2 class="section-title" data-reveal>O que rola <em>em cada dia.</em></h2>
+                    <p data-reveal>Escolha o dia e veja as aulas e horários de day use.</p>
+
+                    <div class="day-tabs" role="tablist" aria-label="Dias da semana" data-reveal>
+                        <button role="tab" data-day="1" data-img="./assets/img/agenda-seg.webp"
+                            data-name="Segunda-feira">Seg</button>
+                        <button role="tab" data-day="2" data-img="./assets/img/agenda-ter.webp"
+                            data-name="Terça-feira">Ter</button>
+                        <button role="tab" data-day="3" data-img="./assets/img/agenda-qua.webp"
+                            data-name="Quarta-feira">Qua</button>
+                        <button role="tab" data-day="4" data-img="./assets/img/agenda-qui.webp"
+                            data-name="Quinta-feira">Qui</button>
+                        <button role="tab" data-day="5" data-img="./assets/img/agenda-sex.webp"
+                            data-name="Sexta-feira">Sex</button>
+                        <button role="tab" data-day="6" data-img="./assets/img/agenda-sab.webp"
+                            data-name="Sábado">Sáb</button>
+                    </div>
+
+                    <div class="day-info" data-reveal>
+                        <div class="day-info__row">
+                            <span>Dia</span>
+                            <strong data-day-name>Segunda-feira</strong>
+                        </div>
+                        <div class="day-info__row">
+                            <span>Funcionamento</span>
+                            <strong data-day-hours>08h às 00h</strong>
+                        </div>
+                        <a class="btn btn--primary btn--block" data-day-cta target="_blank" rel="noopener"
+                            href="https://wa.me/5511950214708?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20um%20hor%C3%A1rio.">
+                            <i class="fa-brands fa-whatsapp"></i><span>Reservar para <span data-day-short>segunda</span></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="agenda__poster" data-reveal>
+                    <button class="phone" data-lightbox="./assets/img/agenda-seg.webp" data-agenda-btn
+                        aria-label="Ampliar agenda do dia">
+                        <img src="./assets/img/agenda-seg.webp" alt="Agenda de segunda-feira" data-agenda-img
+                            width="800" height="1422" loading="lazy">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ DIFERENCIAIS ============ -->
+        <section class="section" id="diferenciais">
+            <div class="container">
+                <div class="section-head section-head--center">
+                    <span class="eyebrow" data-reveal>Diferenciais</span>
+                    <h2 class="section-title" data-reveal>Por que a galera <em>escolhe a Pro.</em></h2>
+                </div>
+
+                <div class="features">
+                    <article class="feature feature--highlight" data-reveal>
+                        <div class="feature__icon"><i class="fa-solid fa-music"></i></div>
+                        <h3>Programação fixa</h3>
+                        <ul class="feature__events">
+                            <li>
+                                <span class="feature__day">Sexta · 20h</span>
+                                <strong>Sertanejo + Noite da Pizza</strong>
+                            </li>
+                            <li>
+                                <span class="feature__day">Sábado · 12h</span>
+                                <strong>Pagode &amp; Feijoada</strong>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="feature" data-reveal>
+                        <div class="feature__icon"><i class="fa-solid fa-dumbbell"></i></div>
+                        <h3>Gympass &amp; TotalPass</h3>
+                        <p>Use seu plano nas nossas aulas. Fale com a gente para saber mais.</p>
+                    </article>
+
+                    <article class="feature" data-reveal>
+                        <div class="feature__icon"><i class="fa-solid fa-car"></i></div>
+                        <h3>Estacionamento</h3>
+                        <p>2 horas grátis. Depois, preço único de R$&nbsp;10,00.</p>
+                    </article>
+
+                    <article class="feature" data-reveal>
+                        <div class="feature__icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Segurança</h3>
+                        <p>Ambiente monitorado 24h e estacionamento seguro.</p>
+                    </article>
+
+                    <article class="feature" data-reveal>
+                        <div class="feature__icon"><i class="fa-solid fa-children"></i></div>
+                        <h3>Espaço kids</h3>
+                        <p>Área para as crianças se divertirem enquanto você joga.</p>
+                    </article>
+
+                    <article class="feature" data-reveal>
+                        <div class="feature__icon"><i class="fa-solid fa-wifi"></i></div>
+                        <h3>Wi-Fi grátis</h3>
+                        <p>Internet de alta velocidade em todo o espaço.</p>
+                    </article>
+
+                    <article class="feature" data-reveal>
+                        <div class="feature__icon"><i class="fa-regular fa-clock"></i></div>
+                        <h3>Horário estendido</h3>
+                        <p>Seg. a sex. 8h–00h · Sáb. 8h–20h · Dom. 8h–18h.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CARDÁPIO ============ -->
+        <section class="section section--tint" id="cardapio">
+            <div class="container menu">
+                <div class="menu__text">
+                    <span class="eyebrow" data-reveal>Cardápio</span>
+                    <h2 class="section-title" data-reveal>Fome depois <em>do jogo?</em></h2>
+                    <p data-reveal>
+                        Porções, espetos, hambúrgueres artesanais, açaí, drinks e cerveja gelada.
+                        Confira o cardápio completo com todos os preços.
+                    </p>
+
+                    <ul class="menu__cats" data-reveal>
+                        <li>Porções</li>
+                        <li>Espetos</li>
+                        <li>Hambúrgueres</li>
+                        <li>Beirutes</li>
+                        <li>Tapiocas</li>
+                        <li>Pastéis</li>
+                        <li>Açaí</li>
+                        <li>Cafeteria</li>
+                        <li>Sucos</li>
+                        <li>Caipirinhas</li>
+                        <li>Cervejas</li>
+                        <li>Drinks &amp; Combos</li>
+                    </ul>
+
+                    <div class="menu__actions" data-reveal>
+                        <a class="btn btn--primary btn--lg" href="./CARDAPIO_ARENA_PRO_BEACH_VIRTUAL.pdf"
+                            target="_blank" rel="noopener">
+                            <i class="fa-regular fa-file-lines"></i> Abrir cardápio completo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="menu__visual" data-reveal>
+                    <img src="./assets/img/lanchonete.webp" alt="Salão da lanchonete da Arena Pro Beach"
+                        loading="lazy">
+                    <div class="price-tag price-tag--1">
+                        <span>Pro Beach Burguer</span><strong>R$ 30</strong>
+                    </div>
+                    <div class="price-tag price-tag--2">
+                        <span>Açaí na tigela 300ml</span><strong>R$ 22</strong>
+                    </div>
+                    <div class="price-tag price-tag--3">
+                        <span>Caipirinha 500ml</span><strong>R$ 22</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTATO / LOCALIZAÇÃO ============ -->
+        <section class="section" id="contato">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow" data-reveal>Contato &amp; localização</span>
+                        <h2 class="section-title" data-reveal>Vem conhecer <em>a arena.</em></h2>
+                    </div>
+                    <p class="section-head__aside" data-reveal>
+                        Reserve seu horário ou tire dúvidas pelo WhatsApp. Atendimento rápido e sem burocracia.
+                    </p>
+                </div>
+
+                <div class="contact">
+                    <div class="contact__map" data-reveal>
+                        <iframe title="Mapa da Arena Pro Beach"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3072.772656415476!2d-46.58250305262612!3d-23.67012441329991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce43899bdcad79%3A0x7cffb1595ea2ee08!2sArena%20Pro%20Beach%20-%20SBC!5e0!3m2!1spt-BR!2sbr!4v1772067542786!5m2!1spt-BR!2sbr"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                        <a class="btn btn--dark contact__route"
+                            href="https://www.google.com/maps/dir/?api=1&amp;destination=Arena%20Pro%20Beach%20-%20SBC%2C%20Av.%20C%C3%A9zar%20Magnani%2C%20840%2C%20S%C3%A3o%20Bernardo%20do%20Campo"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Como chegar
+                        </a>
+                    </div>
+
+                    <div class="contact__card" data-reveal>
+                        <div class="open-status" data-open-card>
+                            <span class="status-dot" data-open-dot></span>
+                            <div>
+                                <strong data-open-title>Horário de funcionamento</strong>
+                                <span data-open-sub>Seg. a sex. 8h–00h · Sáb. 8h–20h · Dom. 8h–18h</span>
+                            </div>
+                        </div>
+
+                        <ul class="contact__list">
+                            <li>
+                                <span class="contact__icon"><i class="fa-solid fa-location-dot"></i></span>
+                                <div>
+                                    <span>Endereço</span>
+                                    <strong>Av. Cézar Magnani, 840 · Paulicéia, São Bernardo do Campo</strong>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="contact__icon"><i class="fa-brands fa-whatsapp"></i></span>
+                                <div>
+                                    <span>Telefone &amp; WhatsApp</span>
+                                    <a href="tel:+5511950214708"><strong>(11) 95021-4708</strong></a>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="contact__icon"><i class="fa-regular fa-envelope"></i></span>
+                                <div>
+                                    <span>E-mail</span>
+                                    <a href="mailto:arena_probeach@outlook.com"><strong>arena_probeach@<wbr>outlook.com</strong></a>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="contact__icon"><i class="fa-regular fa-clock"></i></span>
+                                <div>
+                                    <span>Horários</span>
+                                    <ul class="hours" data-hours>
+                                        <li data-hours-day="weekdays"><span>Segunda a sexta</span><strong>08h – 00h</strong></li>
+                                        <li data-hours-day="6"><span>Sábado</span><strong>08h – 20h</strong></li>
+                                        <li data-hours-day="0"><span>Domingo</span><strong>08h – 18h</strong></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="contact__actions">
+                            <a class="btn btn--primary btn--block"
+                                href="https://wa.me/5511950214708?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                                target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp</a>
+                            <a class="btn btn--outline btn--block" href="tel:+5511950214708"><i
+                                    class="fa-solid fa-phone"></i> Ligar agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA FINAL ============ -->
+        <section class="cta-band">
+            <div class="container">
+                <div class="cta-band__box" data-reveal>
+                    <div class="cta-band__glow" aria-hidden="true"></div>
+                    <h2>Pronto para <em>jogar?</em></h2>
+                    <p>Garanta sua quadra agora. É só chamar no WhatsApp.</p>
+                    <a class="btn btn--light btn--lg"
+                        href="https://wa.me/5511950214708?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20uma%20quadra."
+                        target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp"></i> Reservar minha quadra
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <section>
-        <div class="about-us reveal" id="about">
-            <video autoplay muted loop playsinline class="bg-video">
-                <source src="./assets/video-drone.MP4" type="video/mp4">
-            </video>
-
-            <div class="text-about-us">
-                <p class="title">Sobre Nós</p>
-                <h1>Bem-vindo à <br>
-                    <span>Arena Pro Beach</span>
-                </h1>
-                <p>O maior complexo esportivo do ABC, um espaço dedicado ao esporte e à diversão!
-                    Localizada em um ambiente privilegiado de fácil acesso, nossa arena é o ponto de encontro ideal para
-                    amantes de atividades físicas ou para um Happy hour com os amigos.</p>
-                <p>Aqui, oferecemos uma variedade de modalidades esportivas que atendem a todos os gostos e idades. Você
-                    pode praticar futevôlei, vôlei, e beach tennis, além de participar de aulas de funcional beach e futebol, que
-                    garantem um treino completo e dinâmico. Nossas quadras são projetadas para proporcionar a melhor
-                    experiência, com infraestrutura de qualidade e segurança.</p>
-
-                <p>Mas não paramos por aí! Nossa arena também é perfeita para a realização de eventos. Com espaços
-                    equipados com churrasqueiras, você pode organizar festas, confraternizações ou celebrações
-                    especiais, enquanto desfruta de um ambiente descontraído e acolhedor.</p>
-
-                <p>Aproveite tudo o que temos a oferecer, e vem ser PRO!</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="services reveal" id="services">
-        <div class="text-services">
-            <p class="title">Nossos Serviços</p>
-            <h1>Tudo para sua <span>diversão</span></h1>
-            <p>Oferecemos estrutura completa para você e sua família aproveitarem momentos únicos.</p>
-        </div>
-
-        <div class="wrapper-services">
-            <div class="box-services">
-                <div class="services-img">
-                    <img src="./assets/quadra-society.jpg" alt="quadra de society">
-                </div>
-                <h2>Quadras de Society</h2>
-                <p>Quadras com grama sintética de alta qualidade, iluminação profissional e vestiários completos.</p>
-                <div class="box-details">
-                    <p>Grama sintética</p>
-                    <p>Iluminação LED</p>
-                    <p>Vestiário</p>
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <a href="#inicio" class="nav__brand">
+                    <img src="./assets/img/logo.webp" alt="" width="40" height="40">
+                    <span>Arena <strong>Pro Beach</strong></span>
+                </a>
+                <p>O maior complexo esportivo do ABC. Vem ser PRO!</p>
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/arena_probeach/" target="_blank" rel="noopener"
+                        aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/arenaprobeach/?locale=pt_BR" target="_blank" rel="noopener"
+                        aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/5511950214708" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
 
-            <div class="box-services">
-                <div class="services-img">
-                    <img src="./assets/quadras-futevolei.jpg" alt="Quadras de futvôlei">
-                </div>
-
-                <h2>Quadras de Areia</h2>
-                <p>Areia de qualidade e estrutura completa para você curtir o melhor dos esportes de areia.</p>
-                <div class="box-details">
-                    <p>Areia peneirada</p>
-                    <p>Rede profissional</p>
-                    <p>Estrutura completa</p>
-                </div>
+            <div class="footer__col">
+                <h4>Navegue</h4>
+                <a href="#sobre">Sobre</a>
+                <a href="#estrutura">Estrutura</a>
+                <a href="#aulas">Aulas</a>
+                <a href="#agenda">Agenda</a>
+                <a href="./CARDAPIO_ARENA_PRO_BEACH_VIRTUAL.pdf" target="_blank" rel="noopener">Cardápio</a>
             </div>
 
-            <div class="box-services">
-                <div class="services-img">
-                    <img src="./assets/churrasqueira-iphone.jpg" alt="">
-                </div>
-
-                <h2>Churrasqueiras</h2>
-                <p>Espaços privativos com churrasqueira, mesas, bancos e área coberta para seu evento.</p>
-                <div class="box-details">
-                    <p>Área coberta</p>
-                    <p>Mesas e bancos</p>
-                    <p>Pia e balcão</p>
-                </div>
-            </div>
-
-            <div class="box-services">
-                <div class="services-img">
-                    <img src="./assets/lanchonete.jpg" alt="">
-                </div>
-                <h2>Lanchonete</h2>
-                <p>Lanches, bebidas, sucos naturais e muito mais para repor suas energias.</p>
-                <div class="box-details">
-                    <p>Lanches variados</p>
-                    <p>Bebidas geladas</p>
-                    <p>Sucos naturais</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="plans reveal" id="aulas">
-        <div class="wrapper-class">
-            <p class="title">Aulas</p>
-            <h1>Escolha sua aula e venha para a <br>
-                <span>Pro Beach</span>
-            </h1>
-        </div>
-
-        <div class="wrapper-plans">
-            <div class="box-plans">
-                <img src="./assets/aulas futvolei.jpeg" alt="">
-
-                <div class="price-plans">
-
-                    <a href="https://wa.me/5511950214708?text=Olá, gostaria de reservar um horário para o futevôlei!">AGENDE
-                        JÁ SUA AULA</a>
-                </div>
-
-
-            </div>
-
-            <div class="box-plans">
-                <img src="./assets/beach tenis.jpeg" alt="">
-
-                <div class="price-plans">
-                    <a href="https://wa.me/5511950214708?text=Olá, gostaria de reservar um horário para o beachtênis!">AGENDE
-                        JÁ SUA AULA</a>
-                </div>
-            </div>
-
-            <div class="box-plans">
-                <img src="./assets/funcional beach.jpeg" alt="">
-
-                <div class="price-plans">
-
-                    <a
-                        href="https://wa.me/5511950214708?text=Olá, gostaria de reservar um horário para o Funcional Beach!">AGENDE
-                        JÁ SUA AULA</a>
-                </div>
-            </div>
-
-            <div class="box-plans">
-                <img src="./assets/AULAS DE VÔLEI.png" alt="">
-
-                <div class="price-plans">
-
-                    <a
-                        href="https://wa.me/5511950214708?text=Olá, gostaria de reservar um horário para o Funcional Beach!">AGENDE
-                        JÁ SUA AULA</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="diferenciais reveal" id="dif">
-        <div class="text-diferenciais">
-            <p class="title">Diferenciais</p>
-            <h1>Por que nos <span>escolher?</span></h1>
-            <p>Mais do que um espaço, oferecemos uma experiência completa para você e sua família.</p>
-        </div>
-
-        <div class="wrapper-info">
-            <div class="box-info">
-                <i class="fa-solid fa-dumbbell"></i>
-                <h3>GymPass & TotalPass</h3>
-                <p>Entre em contato para mais informações!</p>
-            </div>
-
-            <div class="box-info">
-                <i class="fa-solid fa-shield"></i>
-                <h3>Segurança</h3>
-                <p>Ambiente monitorado 24h com estacionamento seguro</p>
-            </div>
-
-            <div class="box-info">
-                <i class="fa-solid fa-clock"></i>
-                <h3>Horário Flexível</h3>
-                <p>Funcionamos de segunda a sexta das 08h às 00h.
-                    Sábados das 08h às 20h. Domingo das 08h às 18h. <br>
-                    Venha jogar quando quiser!
-                </p>
-            </div>
-
-            <div class="box-info">
-                <i class="fa-solid fa-map-pin"></i>
-                <h3>Fácil Acesso</h3>
-                <p>Localização privilegiada com fácil acesso</p>
-            </div>
-
-            <div class="box-info">
-                <i class="fa-solid fa-wifi"></i>
-                <h3>Wi-Fi Grátis</h3>
-                <p>Internet de alta velocidade em todo o espaço</p>
-            </div>
-
-            <div class="box-info">
-                <i class="fa-solid fa-car"></i>
-                <h3>Estacionamento</h3>
-                <p>2 horas grátis! Demais horas por apenas R$10,00(Preço Único)</p>
-            </div>
-
-            <div class="box-info">
-                <i class="fa-solid fa-people-group"></i>
-                <h3>Família</h3>
-                <p>Espaço kids para as crianças se divertirem</p>
-            </div>
-
-            <div class="box-info">
-                <i class="fa-solid fa-champagne-glasses"></i>
-                <h3>Pagode e Feijoada</h3>
-                <p>Todo sábado a partir das 12h!</p>
-                <p>Toda Sexta: Sertanejo com noite da pizza a partir das 20h!</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-
-    <section class="location reveal" id="location">
-        <div class="location-description">
-            <p class="title">Localização</p>
-            <h1>Venha conhecer nosso <span>espaço!</span></h1>
-            <p>Veja no mapa abaixo qual a melhor rota até nós!</p>
-        </div>
-
-        <nav>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3072.772656415476!2d-46.58250305262612!3d-23.67012441329991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce43899bdcad79%3A0x7cffb1595ea2ee08!2sArena%20Pro%20Beach%20-%20SBC!5e0!3m2!1spt-BR!2sbr!4v1772067542786!5m2!1spt-BR!2sbr"
-                style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </nav>
-    </section>
-
-    <section class="schedule">
-        <div class="schedule-description">
-            <p class="title">Horários</p>
-            <h1>Nossa <span>agenda</span></h1>
-            <p>Dê uma olhada em nossa agenda e veja qual o melhor horário na sua agenda!</p>
-        </div>
-
-        <nav class="wrapper-hour">
-            <div class="card-image">
-                <img src="./assets/SEGUNDA-FEIRA.png" alt="">
-            </div>
-            <div class="card-image">
-                <img src="./assets/TERÇA-FEIRA.png" alt="">
-            </div>
-            <div class="card-image">
-                <img src="./assets/QUARTA-FEIRA.png" alt="">
-            </div>
-
-            <div class="card-image">
-                <img src="./assets/QUINTA-FEIRA.png" alt="">
-            </div>
-
-            <div class="card-image">
-                <img src="./assets/SEXTA-FEIRA.png" alt="">
-            </div>
-
-            <div class="card-image">
-                <img src="./assets/SÁBADO.png" alt="">
-            </div>
-
-        </nav>
-
-    </section>
-
-
-    <section class="contact reveal" id="contact">
-        <div class="wrapper-content">
-            <div class="left-content">
-                <p class="title-contact">Contato</p>
-                <h1>Faça sua <span>reserva</span></h1>
-                <p>Entre em contato conosco para agendar seu horário ou tirar suas dúvidas. <br>
-                    Estamos prontos para atendê-lo!</p>
-
-                <div class="contact-info">
-                    <div class="card-info">
-                        <div class="icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-
-                        <div class="text-contact">
-                            <p>Telefone</p>
-                            <p>(11) 95021-4708</p>
-                        </div>
-                    </div>
-
-                    <div class="card-info">
-                        <div class="icon">
-                            <i class="fa-solid fa-mobile"></i>
-                        </div>
-
-                        <div class="text-contact">
-                            <p>WhatsApp</p>
-                            <p>(11) 95021-4708</p>
-                        </div>
-                    </div>
-
-                    <div class="card-info">
-                        <div class="icon">
-                            <i class="fa-regular fa-envelope"></i>
-                        </div>
-
-                        <div class="text-contact">
-                            <p>E-mail</p>
-                            <p>arena_probeach@outlook.com</p>
-                        </div>
-                    </div>
-
-                    <div class="card-info">
-                        <div class="icon">
-                            <i class="fa-regular fa-map"></i>
-                        </div>
-
-                        <div class="text-contact">
-                            <p>Endereço</p>
-                            <p>Av. Cézar Magnani, N° 840 - Paulicéia, São Bernardo do Campo</p>
-                        </div>
-                    </div>
-
-                    <div class="card-info">
-                        <div class="icon">
-                            <i class="fa-regular fa-clock"></i>
-                        </div>
-
-                        <div class="text-contact">
-                            <p>Horário</p>
-                            <p>Segunda a Sexta: 8h às 00h <br>
-                            Sábado: 8h às 20h <br>
-                            Domingo: 8h às 18h
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="right-content">
-                <h1>Pronto para jogar?</h1>
-                <p>Reserve agora sua quadra e garanta seu horário. <br>
-                    Atendimento rápido e sem burocracia!</p>
-
-                <a href="https://wa.me/5511950214708?text=Olá, gostaria de mais informações!">Chamar no WhatsApp</a>
-                <a href="tel:5511950214708">Ligar Agora</a>
+            <div class="footer__col">
+                <h4>Contato</h4>
+                <a href="tel:+5511950214708">(11) 95021-4708</a>
+                <a href="mailto:arena_probeach@outlook.com">arena_probeach@outlook.com</a>
+                <span>Av. Cézar Magnani, 840<br>Paulicéia · São Bernardo do Campo</span>
             </div>
         </div>
 
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <p>© 2026 Arena Pro Beach. <br>
-                    Todos os direitos reservados.</p>
-                <p>Desenvolvido por <a href="https://niccolaspeixoto.com/" target="_blank">Niccolas Peixoto</a></p>
-            </div>
-
-            <div class="footer-sociais">
-                <h3>Nos acompanhe</h3>
-                <div class="sociais-icons">
-                    <a href="https://www.instagram.com/arena_probeach/" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/arenaprobeach/?locale=pt_BR" target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="https://wa.me/5511950214708" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
+        <div class="container footer__bottom">
+            <p>© <span data-year>2026</span> Arena Pro Beach. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="https://niccolaspeixoto.com/" target="_blank" rel="noopener">Niccolas
+                    Peixoto</a></p>
         </div>
     </footer>
+
+    <!-- WhatsApp flutuante -->
+    <a class="wa-float" href="https://wa.me/5511950214708?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+        target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Lightbox -->
+    <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada">
+        <button class="lightbox__close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+        <img src="" alt="">
+    </dialog>
+
+    <script src="./script.js" defer></script>
 </body>
-<script src="./script.js"></script>
 
 </html>
